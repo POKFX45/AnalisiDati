@@ -95,7 +95,9 @@ cout<<"Il valore massimo trovato è "<<max<<endl;
 
 /*
 
-//Ordinamento dei valori
+//Ordinamento dei valori, 
+non va un cazzo qua :D
+
 
 int me, cont,zero, start;
 start=0;
