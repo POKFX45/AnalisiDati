@@ -100,8 +100,11 @@ cout<<"Il valore massimo trovato è "<<max<<endl;
 int me, indicemin,start, t;
 start=0;
 float min2,zero;
+bool lovoglio;
 
-//cout<<"\nVuoi vedere i dati in modo ordinato"<<
+cout<<"\nVuoi vedere i dati in modo ordinato? (si=1/no=0)\n\n";
+cin>>lovoglio;
+if(lovoglio==1){
 
 cout<<"\nOrdinamento dei valori\n";
 for(start=0; start<=ndati; start++){
@@ -115,13 +118,15 @@ if(min2>misure[me])   {min2=misure[me]; /*cout<<"me    =   "<<me<<endl;*/ indice
 zero=misure[indicemin];
 misure[indicemin]=misure[start];
 misure[start]=zero;
-cout<<misure[start]<<endl;
+
+
+cout<<misure[start]<<"; ";
 //cout<<"sstart= "<<start<<endl;
 //cout<<"prova n"<<zero<<"   "<<misure[zero]<<endl;
 
 };
 
-
+}
 
 
 //Inizio calcoli istogramma
