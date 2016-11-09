@@ -93,36 +93,34 @@ cout<<"\nIl valore minimo trovato è "<<min<<endl;
 cout<<"Il valore massimo trovato è "<<max<<endl;
 
 
-/*
+
 
 //Ordinamento dei valori, 
-non va un cazzo qua :D
 
-
-int me, cont,zero, start;
+int me, indicemin,start, t;
 start=0;
-float min2;
-float varia[0];
+float min2,zero;
 
-min2=misure[0];
+//cout<<"\nVuoi vedere i dati in modo ordinato"<<
 
-cout<<"\nordinamento dei valori\n";
-for(zero=0; zero<=3; zero++){
-for(me=0; me<=ndati-me; me++){
-if(min2>misure[me])   {min2=misure[me]; cout<<"me    =   "<<me<<endl; cont=me; };
-};
-start++;
+cout<<"\nOrdinamento dei valori\n";
+for(start=0; start<=ndati; start++){
+min2=max;
+indicemin=start;
+for(me=start; me<=ndati; me++){
+if(min2>misure[me])   {min2=misure[me]; /*cout<<"me    =   "<<me<<endl;*/ indicemin=me; };
+     }
 
 //cout<<"misure posto 0   "<<misure[zero]<<endl;//cout<<"varia    "<<varia[0]<<endl;
-varia[0]=misure[zero];
-misure[zero]=misure[cont];
-misure[cont]=varia[0];
-min2=misure[zero];
-cout<<"sstart= "<<start<<endl;
-cout<<"prova n"<<zero<<"   "<<misure[zero]<<endl;
+zero=misure[indicemin];
+misure[indicemin]=misure[start];
+misure[start]=zero;
+cout<<misure[start]<<endl;
+//cout<<"sstart= "<<start<<endl;
+//cout<<"prova n"<<zero<<"   "<<misure[zero]<<endl;
 
-}
-*/
+};
+
 
 
 
