@@ -95,7 +95,7 @@ cout<<"Il valore massimo trovato è "<<max<<endl;
 
 
 
-//Ordinamento dei valori, 
+//Ordinamento dei valori 
 
 int me, indicemin,start, t;
 start=0;
@@ -156,13 +156,17 @@ if(misure[lol]>min+phi*intervallino && misure[lol]<min+(phi+1)*intervallino)bin[
 
 bool si, si2;
 
-cout<<"Per vedere quanti punti cadono in ogni intervallo inserisci 1:\n";
+cout<<"Vuoi vedere quanti punti cadono in ogni intervallo? (si=1/no=0)\n";
 cin>>si;
 if(si==true){
 for(int phi=0; phi<nbin; phi++){
 cout<<"Nell'intervallo "<<phi<<" cadono "<<bin[phi]<<" punti"<<endl;}
 
 //aggiornamento istogramma prof
+bool ok;
+cout<<"\nVuoi vedere l'aggiornamento del prof? (si=1/no=0)\n";
+cin>>ok;
+if(ok==1){
 cout<<"\n\nSono l'aggiornamento del prof\n\n"<<endl;
 for (int i =0 ;i<nbin;i++)
 cout<<min+intervallino/2+i*intervallino<<" "<<bin[i]<<endl;
@@ -178,7 +182,7 @@ cin>>si2;
 if(si2==true){goto top;}
 }
 }
-
+}
 //nel caso il file non si fosse aperto esegue questo comando e torna all'inizio
 else {cout<<"\nIl file che cerchi non esiste\n";
 goto top;}
