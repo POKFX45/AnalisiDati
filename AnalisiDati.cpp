@@ -97,15 +97,18 @@ cout<<"Il valore massimo trovato è "<<max<<endl;
 
 //Ordinamento dei valori 
 
-int me, indicemin,start, t;
+int me, indicemin,start, t, cambio;
 start=0;
 float min2,zero;
-bool lovoglio;
 
-cout<<"\nVuoi vedere i dati in modo ordinato? (si=1/no=0)\n\n";
-cin>>lovoglio;
-if(lovoglio==1){
 
+cout<<"\nVuoi vedere i dati in modo ordinato? (crescente=1/descrescente=0/no=qualsiasi altro numero)\n\n";
+cin>>cambio;
+
+switch(cambio){
+case 0:
+
+//crescente
 cout<<"\nOrdinamento dei valori\n";
 for(start=0; start<=ndati; start++){
 min2=max;
@@ -115,10 +118,12 @@ if(min2>misure[me])   {min2=misure[me]; /*cout<<"me    =   "<<me<<endl;*/ indice
      }
 
 //cout<<"misure posto 0   "<<misure[zero]<<endl;//cout<<"varia    "<<varia[0]<<endl;
+
+if (min2 != misure[start]){
 zero=misure[indicemin];
 misure[indicemin]=misure[start];
 misure[start]=zero;
-
+}
 
 cout<<misure[start]<<"; ";
 //cout<<"sstart= "<<start<<endl;
@@ -126,7 +131,40 @@ cout<<misure[start]<<"; ";
 
 };
 
+
+//Ordinamento dei valori decrescente
+break;
+case 1:
+
+int max2;
+
+cout<<"\nOrdinamento dei valori\n";
+for(start=0; start<=ndati; start++){
+max2=min;
+indicemin=start;
+for(me=start; me<=ndati; me++){
+if(max2<misure[me])   {max2=misure[me]; /*cout<<"me    =   "<<me<<endl;*/ indicemin=me; };
+     }
+
+//cout<<"misure posto 0   "<<misure[zero]<<endl;//cout<<"varia    "<<varia[0]<<endl;
+
+if (min2 != misure[start]){
+zero=misure[indicemin];
+misure[indicemin]=misure[start];
+misure[start]=zero;
 }
+
+cout<<misure[start]<<"; ";
+//cout<<"sstart= "<<start<<endl;
+//cout<<"prova n"<<zero<<"   "<<misure[zero]<<endl;
+
+};
+break;
+default: 
+cout<<"ho skippato"<<endl; 
+break;
+}
+
 
 
 //Inizio calcoli istogramma
