@@ -1,6 +1,3 @@
-//Author F. Zarzaca 10 Nov 2016
-//Debugged by G. Mandaglio 11 Nov 2016
-
 #include <iostream>
 #include <fstream>
 #include <cmath>
